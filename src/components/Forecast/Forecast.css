@@ -1,0 +1,24 @@
+@media only screen and (max-width: 900px){
+
+ .sidebar-bottom__inner {
+    min-width: 264px;
+ }
+    .sidebar-bottom__inner-heading {
+        font-size: 18px;
+        text-align: center;
+    }
+    .sidebar-bottom__inner-item {
+        gap: 10px;
+
+        & p, h3{
+            font-size: 14px;
+        }
+
+        
+    }
+
+    .sidebar-bottom__inner-item-img {
+        width: 50px;
+        height: 50px;
+    }
+}
