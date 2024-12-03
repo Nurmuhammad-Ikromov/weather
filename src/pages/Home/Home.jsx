@@ -18,7 +18,7 @@ export default function Home() {
 
   error && alert(error);
 
- 
+
 
 
   const API = axios.create({
@@ -38,33 +38,34 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    API.get(`/weather?lat=${location.lat}&lon=${location.lon}&appid=${API_KEY}&units=metric`)
+    location.lat && API.get(`/weather?lat=${location.lat}&lon=${location.lon}&appid=${API_KEY}&units=metric`)
       .then((res) => setCurrentWeather(res.data)
-      )
+      ).catch((err) => console.log("Xatolik"))
 
-    API.get(`/forecast?lat=${location.lat}&lon=${location.lon}&appid=${API_KEY}&units=metric`)
+    location.lat && API.get(`/forecast?lat=${location.lat}&lon=${location.lon}&appid=${API_KEY}&units=metric`)
       .then((res) => setForecast(res.data)
+      ).catch((err) => console.log("Xatolik")
       )
 
-    API.get(`/air_pollution?lat=${location.lat}&lon=${location.lon}&appid=${API_KEY}`)
+    location.lat && API.get(`/air_pollution?lat=${location.lat}&lon=${location.lon}&appid=${API_KEY}`)
       .then((res) => setAirQuality(res.data)
-      )
+      ).catch((err) => console.log("Xatolik"))
   }, [location])
 
   const fetchData = () => {
     API.get(`/weather?q=${inputRef.current.value}&appid=${API_KEY}&units=metric`)
       .then((res) => setCurrentWeather(res.data)
-      )
+      ).catch((err) => console.log("Xatolik"))
 
     API.get(`/forecast?q=${inputRef.current.value}&appid=${API_KEY}&units=metric`)
       .then((res) => setForecast(res.data)
-      )
+      ).catch((err) => console.log("Xatolik"))
   }
 
   useEffect(() => {
-    API.get(`/air_pollution?lat=${currentWeather?.coord.lat}&lon=${currentWeather?.coord.lon}&appid=${API_KEY}`)
+    currentWeather && API.get(`/air_pollution?lat=${currentWeather?.coord.lat}&lon=${currentWeather?.coord.lon}&appid=${API_KEY}`)
       .then((res) => setAirQuality(res.data)
-      )
+      ).catch((err) => console.log("Xatolik"))
   }, [currentWeather])
 
 
