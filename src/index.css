@@ -12,3 +12,17 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
+
+
+
+.light {
+  --bg-main: #e3e8e9;
+  --bg-item-main: #d9dfe1;
+  --color-main: #000;
+}
+
+.dark {
+  --bg-main: #212528;
+  --bg-item-main: #282c2d;
+  --color-main: #fff;
+}

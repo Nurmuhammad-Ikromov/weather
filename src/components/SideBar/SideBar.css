@@ -1,7 +1,7 @@
 .sidebar {
-  color: white;
+  color: var(--color-main);
   padding-top: 108px;
-  background-color: #212528;
+  background-color: var(--bg-main);
   padding-bottom: 100px;
 }
 .sidebar__inner {
@@ -19,7 +19,7 @@
   width: 100%;
   padding: 20px 15px;
   border-radius: 20px;
-  background-color: #282c2d;
+  background-color: var(--bg-item-main);
 }
 .sidebar-top__inner-heading {
   font-size: 16px;
@@ -67,7 +67,7 @@
   width: 100%;
   padding: 15px 15px;
   border-radius: 20px;
-  background-color: #282c2d;
+  background-color: var(--bg-item-main);
 }
 .sidebar-bottom__inner-heading {
   font-weight: 400;
@@ -110,7 +110,7 @@
 }
 .sidebar__inner-right-top-quality {
   width: 415px;
-  background-color: #282c2d;
+  background-color: var(--bg-item-main);
   padding: 20px 15px;
   border-radius: 20px;
 }
@@ -164,7 +164,7 @@
 }
 .sidebar__inner-right-top-sun {
   width: 480px;
-  background-color: #282c2d;
+  background-color: var(--bg-item-main);
   padding-top: 20px;
   padding-left: 25px;
   padding-bottom: 150px;
@@ -221,7 +221,7 @@
   flex-direction: column;
   padding: 10px;
   border-radius: 10px;
-  background-color: #282c2d;
+  background-color: var(--bg-item-main);
 }
 .sidebar__inner-right-top-main-item-heading {
   color: #5d6265;
@@ -252,15 +252,15 @@
 }
 .sidebar__inner-right-top-weather-list {
   list-style-type: none;
-display: grid;
-grid-template-columns: repeat(8, 1fr);
-column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 10px;
 }
 .sidebar__inner-right-top-weather-item {
   padding: 10px 20px;
   padding-right: 20px;
   text-align: center;
-  background-color: #282c2d;
+  background-color: var(--bg-item-main);
   border-radius: 10px;
 }
 .sidebar__inner-right-top-weather-item-head {
@@ -275,13 +275,12 @@ column-gap: 10px;
   font-weight: 400;
 }
 
-
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 640px) {
   .sidebar {
     padding-top: 150px;
   }
 }
-@media only screen and (max-width: 510px){
+@media only screen and (max-width: 510px) {
   .sidebar {
     padding-top: 250px;
   }

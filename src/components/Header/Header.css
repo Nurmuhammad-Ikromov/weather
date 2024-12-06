@@ -1,7 +1,7 @@
 .header {
   position: fixed;
   width: 100%;
-  background-color: #212529;
+  background-color: var(--bg-main);
 }
 .header__inner {
   display: flex;
@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 .header__inner-logo {
-  color: white;
+  color: var(--color-main);
   font-size: 30px;
 }
 .header__inner-box {
@@ -20,7 +20,7 @@
   gap: 8px;
 }
 .header__inner-box-input {
-  background-color: #282c2d;
+  background-color: var(--bg-item-main);
   border: none;
   padding: 12px 24px;
   padding-left: 10px;
